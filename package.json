@@ -1,0 +1,41 @@
+{
+  "name": "posthtml-safe-class-names",
+  "description": "Replace escaped characters in HTML class names and CSS selectors.",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Cosmin Popovici (https://github.com/cossssmin)",
+  "bugs": "https://github.com/cossssmin/posthtml-safe-class-names/issues",
+  "homepage": "https://github.com/cossssmin/posthtml-safe-class-names",
+  "repository": "cossssmin/posthtml-safe-class-names",
+  "main": "lib",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "test": "nyc ava",
+    "pretest": "xo",
+    "release": "np"
+  },
+  "keywords": [
+    "escape-char",
+    "html",
+    "html-email",
+    "maizzle",
+    "posthtml",
+    "posthtml-plugin",
+    "safe-char",
+    "tailwindcss"
+  ],
+  "dependencies": {
+    "postcss": "^7.0.27",
+    "postcss-safe-parser": "^4.0.2",
+    "postcss-selector-parser": "^6.0.2",
+    "posthtml": "^0.12.0"
+  },
+  "devDependencies": {
+    "ava": "^3.5.0",
+    "np": "^6.2.0",
+    "nyc": "^15.0.0",
+    "xo": "^0.28.0"
+  }
+}
