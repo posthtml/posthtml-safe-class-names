@@ -153,11 +153,11 @@ Result:
 </html>
 ```
 
-[npm]: https://www.npmjs.com/package/posthtml
-[npm-version-shield]: https://img.shields.io/npm/v/posthtml.svg
-[npm-stats]: http://npm-stat.com/charts.html?package=posthtml
-[npm-stats-shield]: https://img.shields.io/npm/dt/posthtml.svg
-[travis-ci]: https://travis-ci.org/posthtml/posthtml/
-[travis-ci-shield]: https://img.shields.io/travis/posthtml/posthtml/master.svg
+[npm]: https://www.npmjs.com/package/posthtml-safe-class-names
+[npm-version-shield]: https://img.shields.io/npm/v/posthtml-safe-class-names.svg
+[npm-stats]: http://npm-stat.com/charts.html?package=posthtml-safe-class-names
+[npm-stats-shield]: https://img.shields.io/npm/dt/posthtml-safe-class-names.svg
+[travis-ci]: https://travis-ci.org/cossssmin/posthtml-safe-class-names/
+[travis-ci-shield]: https://img.shields.io/travis/cossssmin/posthtml-safe-class-names/master.svg
 [license]: ./LICENSE
-[license-shield]: https://img.shields.io/npm/l/posthtml.svg
+[license-shield]: https://img.shields.io/npm/l/posthtml-safe-class-names.svg
