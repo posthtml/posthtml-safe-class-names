@@ -4,9 +4,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "author": "Cosmin Popovici (https://github.com/cossssmin)",
-  "bugs": "https://github.com/cossssmin/posthtml-safe-class-names/issues",
-  "homepage": "https://github.com/cossssmin/posthtml-safe-class-names",
-  "repository": "cossssmin/posthtml-safe-class-names",
+  "bugs": "https://github.com/posthtml/posthtml-safe-class-names/issues",
+  "homepage": "https://github.com/posthtml/posthtml-safe-class-names",
+  "repository": "posthtml/posthtml-safe-class-names",
   "main": "lib",
   "engines": {
     "node": ">=10"
