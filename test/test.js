@@ -49,6 +49,6 @@ test('Works inside media queries', t => {
   return process(t, 'media-queries')
 })
 
-test.only('Works with font face', t => {
+test('Works with font face', t => {
   return process(t, 'font-face')
 })
