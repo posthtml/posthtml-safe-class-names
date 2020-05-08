@@ -27,15 +27,15 @@
     "tailwindcss"
   ],
   "dependencies": {
-    "postcss": "^7.0.27",
+    "postcss": "^7.0.29",
     "postcss-safe-parser": "^4.0.2",
     "postcss-selector-parser": "^6.0.2",
-    "posthtml": "^0.12.0"
+    "posthtml": "^0.13.0"
   },
   "devDependencies": {
-    "ava": "^3.5.0",
-    "np": "^6.2.0",
-    "nyc": "^15.0.0",
-    "xo": "^0.28.0"
+    "ava": "^3.8.1",
+    "np": "^6.2.3",
+    "nyc": "^15.0.1",
+    "xo": "^0.30.0"
   }
 }
