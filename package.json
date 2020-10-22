@@ -17,25 +17,27 @@
     "release": "np"
   },
   "keywords": [
+    "css-selectors",
     "escape-char",
     "html",
     "html-email",
     "maizzle",
     "posthtml",
     "posthtml-plugin",
+    "replace-escaped-characters",
     "safe-char",
     "tailwindcss"
   ],
   "dependencies": {
-    "postcss": "^7.0.31",
-    "postcss-safe-parser": "^4.0.2",
-    "postcss-selector-parser": "^6.0.2",
-    "posthtml": "^0.13.0"
+    "postcss": "^8.1.0",
+    "postcss-safe-parser": "^5.0.2",
+    "postcss-selector-parser": "^6.0.4",
+    "posthtml": "^0.13.3"
   },
   "devDependencies": {
-    "ava": "^3.8.2",
-    "np": "^6.2.3",
-    "nyc": "^15.0.1",
-    "xo": "^0.30.0"
+    "ava": "^3.13.0",
+    "np": "^6.5.0",
+    "nyc": "^15.1.0",
+    "xo": "^0.33.1"
   }
 }

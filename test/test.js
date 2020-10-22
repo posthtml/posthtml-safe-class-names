@@ -52,3 +52,7 @@ test('Works inside media queries', t => {
 test('Works with font face', t => {
   return process(t, 'font-face')
 })
+
+test('Works with empty <style> tags', t => {
+  return process(t, 'empty-style')
+})
