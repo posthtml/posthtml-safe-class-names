@@ -29,7 +29,7 @@
     "tailwindcss"
   ],
   "dependencies": {
-    "postcss": "^8.1.0",
+    "postcss": "^8.1.10",
     "postcss-safe-parser": "^5.0.2",
     "postcss-selector-parser": "^6.0.4",
     "posthtml": "^0.15.0"
