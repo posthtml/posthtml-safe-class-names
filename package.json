@@ -29,6 +29,7 @@
     "tailwindcss"
   ],
   "dependencies": {
+    "css.escape": "^1.5.1",
     "postcss": "^8.1.10",
     "postcss-safe-parser": "^6.0.0",
     "postcss-selector-parser": "^6.0.4",
