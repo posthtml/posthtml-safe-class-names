@@ -15,11 +15,28 @@
     .foo\:w-2\.5 {
       width: .625rem;
     }
+    .foo\:w-\[600px\] {
+      width: 600px;
+    }
+    .\!w-\[600px\] {
+      width: 600px;
+    }
+    .foo\:\!w-\[600px\] {
+      width: 600px;
+    }
+    .bg-\[\#1da1f1\] {
+      background-color: #1da1f1;
+    }
+    .foo\:mt-\[-40px\] {
+      margin-top: -40px;
+    }
   </style>
 </head>
 <body>
-  <div class="foo foo:italic foo:w-3/5 foo:w-50% foo:w-2.5">
-    test
+  <div class="foo foo:italic foo:w-3/5 foo:w-50% foo:w-2.5 foo:w-[600px]">
+    <div class="!w-600 foo:!w-[600px] bg-[#1da1f1] foo:mt-[-40px]">
+      test
+    </div>
   </div>
 </body>
 </html>
