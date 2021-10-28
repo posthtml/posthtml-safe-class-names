@@ -19,10 +19,11 @@ By default, it replaces:
 - `\%` with `pc`
 - `\.` with `_`
 
+See the full [list of replacements](lib/index.js#L19-L51).
 
 ### But... why?
 
-Because I needed a way to use [Tailwind CSS variants](https://tailwindcss.com/docs/configuring-variants) in my HTML emails 🤷‍♂️
+So you can use those cool [Tailwind CSS](https://tailwindcss.com) selectors in HTML emails. 😎
 
 Escaped characters in CSS selectors or HTML class names are not supported by all email clients (currently Gmail being the biggest one), so you can use this plugin to replace them with safe alternatives.
 
@@ -41,8 +42,13 @@ Consider `example.html`:
 <html>
 <head>
   <style>
-    .sm\:w-3\/5 {
+    .w-3\/5 {
       width: 60%;
+    }
+    
+    /* JIT arbitrary values are also supported */
+    .bg-\[\#1da1f1\] {
+      background-color: #1da1f1;
     }
 
     @media (max-width: 600px) {
@@ -53,7 +59,7 @@ Consider `example.html`:
   </style>
 </head>
 <body>
-  <div class="w-3/5 sm:w-1/2">Lorem ipsum</div>
+  <div class="w-3/5 sm:w-1/2 bg-[#1da1f1]">Lorem ipsum</div>
 </body>
 </html>
 ```
@@ -83,6 +89,10 @@ Result:
       width: 60%;
     }
 
+    .bg-_1da1f1 {
+      background-color: #1da1f1;
+    }
+
     @media (max-width: 600px) {
       .sm-w-1-2 {
         width: 50%;
@@ -91,7 +101,7 @@ Result:
   </style>
 </head>
 <body>
-  <div class="w-3-5 sm-w-1-2">Lorem ipsum</div>
+  <div class="w-3-5 sm-w-1-2 bg-_1da1f1">Lorem ipsum</div>
 </body>
 </html>
 ```
@@ -100,9 +110,7 @@ Result:
 
 ### `replacements`
 
-The plugin accepts an options object where you can define character replacement mappings.
-
-Default:
+The plugin accepts an options object where you can define character replacement mappings:
 
 ```js
 {
@@ -110,8 +118,11 @@ Default:
   '\/': '-',
   '%': 'pc',
   '.': '_',
+  // ...
 }
 ```
+
+See the full [list of replacements](lib/index.js#L19-L51).
 
 Besides adding new mappings, you can of course override the default ones.
 
@@ -140,6 +151,10 @@ Result:
       width: 60%;
     }
 
+    .bg-_1da1f1 {
+      background-color: #1da1f1;
+    }
+
     @media (max-width: 600px) {
       .sm__w-1-2 {
         width: 50%;
@@ -148,7 +163,7 @@ Result:
   </style>
 </head>
 <body>
-  <div class="w-3-5 sm__w-1-2">Lorem ipsum</div>
+  <div class="w-3-5 sm__w-1-2 bg-_1da1f1">Lorem ipsum</div>
 </body>
 </html>
 ```
