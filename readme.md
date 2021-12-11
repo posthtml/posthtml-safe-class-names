@@ -11,9 +11,9 @@
 
 ## Introduction
 
-This plugin replaces escaped characters in class names from your `<style>` tags and inside `class=""` attributes with safe characters, that do not need escaping.
+This plugin replaces escaped characters in class names from your `<style>` tags and inside `class=""` attributes with safe characters, that do not need CSS escaping.
 
-By default, it replaces:
+For example, it replaces:
 
 - `\:` and `\/` with `-`
 - `\%` with `pc`
@@ -65,17 +65,17 @@ Consider `example.html`:
 ```
 
 ```js
-const fs = require('fs')
-const posthtml = require('posthtml')
-const safeClassNames = require('posthtml-safe-class-names')
+import {readFileSync, writeFileSync} from 'node:fs'
+import posthtml from 'posthtml'
+import safeClassNames from 'posthtml-safe-class-names'
 
-const source = fs.readFileSync('./example.html')
+const html = readFileSync('./example.html')
 
 posthtml([
-    safeClassNames()
-  ])
-  .process(source)
-  .then(result => fs.writeFileSync('./after.html', result.html))
+  safeClassNames()
+])
+  .process(html)
+  .then(result => writeFileSync('./after.html', result.html))
 ```
 
 Result:
@@ -130,14 +130,14 @@ Using the same `example.html`, let's choose to replace `\:` in our class names w
 
 ```js
 posthtml([
-    safeClassNames({
-      replacements: {
-        ':': '__',
-      }
-    })
-  ])
-  .process(source)
-  .then(result => fs.writeFileSync('./after.html', result.html))
+  safeClassNames({
+    replacements: {
+      ':': '__',
+    }
+  })
+])
+  .process(html)
+  .then(result => writeFileSync('./after.html', result.html))
 ```
 
 Result:
