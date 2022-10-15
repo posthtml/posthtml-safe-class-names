@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>/* A comment that includes a <tag> inside */
+  <style>
+    /* A comment that includes a <tag> inside */
     .foo-italic {
       font-style: italic; /* 1 */
     }
@@ -28,12 +29,16 @@
     }
     .foo-mt--40px {
       margin-top: -40px;
-    }</style>
+    }
+    .bg-rgba0_0_0_0_75 {
+      background-color: rgba(0,0,0,0.75);
+    }
+  </style>
 </head>
 <body>
   <div class="foo foo-italic foo-w-3-5 foo-w-50pc foo-w-2_5 foo-w-600px">
     <div class="important-w-600 foo-important-w-600px bg-_1da1f1 foo-mt--40px">
-      test
+      <div class="bg-rgba0_0_0_0_75">test</div>
     </div>
   </div>
 </body>
