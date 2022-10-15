@@ -9,7 +9,7 @@
   "repository": "posthtml/posthtml-safe-class-names",
   "main": "lib",
   "engines": {
-    "node": ">=10"
+    "node": ">=12.22.0"
   },
   "scripts": {
     "test": "nyc ava",
