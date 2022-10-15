@@ -30,12 +30,15 @@
     .foo\:mt-\[-40px\] {
       margin-top: -40px;
     }
+    .bg-\[rgba\(0\2c 0\2c 0\2c 0\.75\)\] {
+      background-color: rgba(0,0,0,0.75);
+    }
   </style>
 </head>
 <body>
   <div class="foo foo:italic foo:w-3/5 foo:w-50% foo:w-2.5 foo:w-[600px]">
     <div class="!w-600 foo:!w-[600px] bg-[#1da1f1] foo:mt-[-40px]">
-      test
+      <div class="bg-[rgba(0,0,0,0.75)]">test</div>
     </div>
   </div>
 </body>
