@@ -4,8 +4,8 @@
   <p>Replace escaped characters in class names and CSS selectors</p>
 
   [![Version][npm-version-shield]][npm]
-  [![License][license-shield]][license]
   [![Build][github-ci-shield]][github-ci]
+  [![License][license-shield]][license]
   [![Downloads][npm-stats-shield]][npm-stats]
 </div>
 
@@ -173,6 +173,6 @@ Result:
 [npm-stats]: http://npm-stat.com/charts.html?package=posthtml-safe-class-names
 [npm-stats-shield]: https://img.shields.io/npm/dt/posthtml-safe-class-names.svg
 [github-ci]: https://github.com/posthtml/posthtml-safe-class-names/actions
-[github-ci-shield]: https://img.shields.io/github/workflow/status/posthtml/posthtml-safe-class-names/Node.js%20CI
+[github-ci-shield]: https://github.com/posthtml/posthtml-safe-class-names/actions/workflows/nodejs.yml/badge.svg
 [license]: ./license
 [license-shield]: https://img.shields.io/npm/l/posthtml-safe-class-names.svg
