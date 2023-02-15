@@ -25,7 +25,7 @@ See the full [list of replacements](lib/index.js#L19-L51).
 
 So you can use those cool [Tailwind CSS](https://tailwindcss.com) selectors in HTML emails. 😎
 
-Escaped characters in CSS selectors or HTML class names are not supported by all email clients (currently Gmail being the biggest one), so you can use this plugin to replace them with safe alternatives.
+Escaped characters in CSS selectors are not currently supported by all email clients, so you can use this plugin to replace them with HTML email-safe alternatives.
 
 ## Install
 
@@ -46,7 +46,6 @@ Consider `example.html`:
       width: 60%;
     }
     
-    /* JIT arbitrary values are also supported */
     .bg-\[\#1da1f1\] {
       background-color: #1da1f1;
     }
@@ -126,7 +125,7 @@ See the full [list of replacements](lib/index.js#L19-L51).
 
 Besides adding new mappings, you can of course override the default ones.
 
-Using the same `example.html`, let's choose to replace `\:` in our class names with `__` instead of `-`:
+Using the same `example.html`, let's replace `\:` in our class names with `__` instead of `-`:
 
 ```js
 posthtml([
