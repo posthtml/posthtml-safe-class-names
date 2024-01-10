@@ -6,15 +6,20 @@
   "author": "Cosmin Popovici (https://github.com/cossssmin)",
   "bugs": "https://github.com/posthtml/posthtml-safe-class-names/issues",
   "homepage": "https://github.com/posthtml/posthtml-safe-class-names",
-  "repository": "posthtml/posthtml-safe-class-names",
-  "main": "lib",
+  "repository": "https://github.com/posthtml/posthtml-safe-class-names",
+  "type": "module",
+  "exports": "./lib/index.js",
+  "files": [
+    "lib/index.js"
+  ],
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18"
   },
   "scripts": {
-    "test": "c8 ava",
+    "dev": "vitest",
     "pretest": "xo",
-    "release": "np"
+    "release": "np",
+    "test": "vitest run --coverage"
   },
   "keywords": [
     "css-selectors",
@@ -30,15 +35,16 @@
   ],
   "dependencies": {
     "css.escape": "^1.5.1",
-    "postcss": "^8.1.10",
-    "postcss-safe-parser": "^6.0.0",
-    "postcss-selector-parser": "^6.0.4",
-    "posthtml": "^0.16.4"
+    "postcss": "^8.4.32",
+    "postcss-safe-parser": "^7.0.0",
+    "postcss-selector-parser": "^6.0.15",
+    "posthtml": "^0.16.6"
   },
   "devDependencies": {
-    "ava": "^5.1.1",
-    "c8": "^8.0.0",
+    "@vitest/coverage-v8": "^1.1.1",
+    "@vitest/ui": "^1.1.1",
     "np": "^9.0.0",
-    "xo": "^0.39.1"
+    "vitest": "^1.1.1",
+    "xo": "^0.56.0"
   }
 }

@@ -64,11 +64,11 @@ Consider `example.html`:
 ```
 
 ```js
-const fs = require('fs')
-const posthtml = require('posthtml')
-const safeClassNames = require('posthtml-safe-class-names')
+import posthtml from 'posthtml'
+import {readFileSync, writeFileSync} from 'node:fs'
+import safeClassNames from 'posthtml-safe-class-names'
 
-const source = fs.readFileSync('./example.html')
+const source = readFileSync('./example.html')
 
 posthtml([
     safeClassNames()
@@ -136,7 +136,7 @@ posthtml([
     })
   ])
   .process(source)
-  .then(result => fs.writeFileSync('./after.html', result.html))
+  .then(result => writeFileSync('./after.html', result.html))
 ```
 
 Result:
