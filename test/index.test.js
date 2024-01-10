@@ -58,3 +58,26 @@ test('Works with font face', t => {
 test('Works with empty <style> tags', t => {
   return process(t, 'empty-style')
 })
+
+test('Ignores known class name patterns', t => {
+  return process(t, 'ignored', {
+    ignored: [
+      {
+        heads: '{{',
+        tails: '}}',
+      },
+      {
+        heads: '{{{',
+        tails: '}}}',
+      },
+      {
+        heads: '[[',
+        tails: ']]',
+      },
+      {
+        heads: '[[[',
+        tails: ']]]',
+      },
+    ],
+  })
+})
