@@ -17,9 +17,9 @@
   },
   "scripts": {
     "dev": "vitest",
-    "pretest": "xo",
     "release": "np",
-    "test": "vitest run --coverage"
+    "test": "vitest run --coverage",
+    "pretest": "eslint lib/*.{js,ts}"
   },
   "keywords": [
     "css-selectors",
@@ -43,8 +43,8 @@
   "devDependencies": {
     "@vitest/coverage-v8": "^1.1.1",
     "@vitest/ui": "^1.1.1",
+    "eslint": "^8.57.0",
     "np": "^9.0.0",
-    "vitest": "^1.1.1",
-    "xo": "^0.56.0"
+    "vitest": "^1.1.1"
   }
 }
