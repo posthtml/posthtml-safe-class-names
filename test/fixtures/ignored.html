@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .foo\:bar {
+      display: none;
+    }
+
+    .baz\:\{n\} {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="foo:bar {{{ foo }}} {{ ignore_me }} baz:{n} {{{ baa }}} [[ ignore_this ]] [[[ and_this ]]]">
+    test
+  </div>
+</body>
+</html>

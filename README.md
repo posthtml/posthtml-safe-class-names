@@ -64,11 +64,11 @@ Consider `example.html`:
 ```
 
 ```js
-const fs = require('fs')
-const posthtml = require('posthtml')
-const safeClassNames = require('posthtml-safe-class-names')
+import posthtml from 'posthtml'
+import {readFileSync, writeFileSync} from 'node:fs'
+import safeClassNames from 'posthtml-safe-class-names'
 
-const source = fs.readFileSync('./example.html')
+const source = readFileSync('./example.html')
 
 posthtml([
     safeClassNames()
@@ -109,6 +109,9 @@ Result:
 
 ### `replacements`
 
+Type: `Object`\
+Default: [see list](lib/index.js#L19-L51)
+
 The plugin accepts an options object where you can define character replacement mappings:
 
 ```js
@@ -136,7 +139,7 @@ posthtml([
     })
   ])
   .process(source)
-  .then(result => fs.writeFileSync('./after.html', result.html))
+  .then(result => writeFileSync('./after.html', result.html))
 ```
 
 Result:
@@ -167,11 +170,32 @@ Result:
 </html>
 ```
 
+### `ignored`
+
+Type: `Array`\
+Default: `[{heads: '{{', tails: '}}'}, {heads: '{{{', tails: '}}}'}]`
+
+An array of objects each containing heads/tails strings that mark the start and end of a class name to ignore. If a class name matches a pattern defined here, it will not be processed.
+
+```js
+posthtml([
+    safeClassNames({
+      ignored: [
+        {heads: '[[', tails: ']]'},
+      ]
+    })
+  ])
+  .process('<div class="foo:bar [[ biz ]]">')
+  .then(result => console.log(result.html))
+
+  // <div class="foo-bar [[ biz ]]">
+```
+
 [npm]: https://www.npmjs.com/package/posthtml-safe-class-names
 [npm-version-shield]: https://img.shields.io/npm/v/posthtml-safe-class-names.svg
 [npm-stats]: http://npm-stat.com/charts.html?package=posthtml-safe-class-names
 [npm-stats-shield]: https://img.shields.io/npm/dt/posthtml-safe-class-names.svg
 [github-ci]: https://github.com/posthtml/posthtml-safe-class-names/actions
 [github-ci-shield]: https://github.com/posthtml/posthtml-safe-class-names/actions/workflows/nodejs.yml/badge.svg
-[license]: ./license
+[license]: ./LICENSE
 [license-shield]: https://img.shields.io/npm/l/posthtml-safe-class-names.svg
