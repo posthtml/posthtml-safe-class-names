@@ -10,7 +10,7 @@
   "type": "module",
   "exports": "./lib/index.js",
   "files": [
-    "lib/index.js"
+    "lib"
   ],
   "engines": {
     "node": ">=18"
