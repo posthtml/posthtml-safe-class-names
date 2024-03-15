@@ -30,7 +30,7 @@ Escaped characters in CSS selectors are not currently supported by all email cli
 ## Install
 
 ```
-$ npm i posthtml posthtml-safe-class-names
+npm i posthtml posthtml-safe-class-names
 ```
 
 ## Usage
