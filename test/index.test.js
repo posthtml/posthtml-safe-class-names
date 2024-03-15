@@ -81,3 +81,40 @@ test('Ignores known class name patterns', t => {
     ],
   })
 })
+
+test('Works with escaped selectors in string sources', async () => {
+  const html = `
+    <style>
+      .sm\\:text-left {
+        text-align: left;
+      }
+      .w-1\\.5 {
+        width: 1.5rem;
+      }
+    </style>
+    <div class="sm:text-left w-1.5">foo</div>
+  `
+
+  const result = await posthtml([
+    plugin({
+      replacements: {
+        ':': '__',
+        '.': '_dot_',
+      }
+    })
+  ])
+    .process(html)
+    .then(result => result.html)
+
+  expect(result).toBe(`
+    <style>
+      .sm__text-left {
+        text-align: left;
+      }
+      .w-1_dot_5 {
+        width: 1.5rem;
+      }
+    </style>
+    <div class="sm__text-left w-1_dot_5">foo</div>
+  `)
+})
