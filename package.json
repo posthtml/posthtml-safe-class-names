@@ -8,16 +8,26 @@
   "homepage": "https://github.com/posthtml/posthtml-safe-class-names",
   "repository": "https://github.com/posthtml/posthtml-safe-class-names",
   "type": "module",
-  "exports": "./lib/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "files": [
-    "lib"
+    "dist"
   ],
   "engines": {
     "node": ">=18"
   },
   "scripts": {
     "dev": "vitest",
+    "build": "unbuild",
     "release": "npx np",
+    "prepack": "unbuild",
     "test": "vitest run --coverage",
     "pretest": "biome lint ./lib"
   },
@@ -43,6 +53,7 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@vitest/coverage-v8": "^2.0.2",
+    "unbuild": "^2.0.0",
     "vitest": "^2.0.2"
   }
 }
