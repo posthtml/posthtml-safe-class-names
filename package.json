@@ -17,7 +17,7 @@
   },
   "scripts": {
     "dev": "vitest",
-    "release": "np",
+    "release": "npx np",
     "test": "vitest run --coverage",
     "pretest": "biome lint ./lib"
   },
@@ -43,7 +43,6 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@vitest/coverage-v8": "^1.1.1",
-    "np": "^10.0.0",
     "vitest": "^1.1.1"
   }
 }
