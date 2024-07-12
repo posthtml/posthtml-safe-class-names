@@ -19,7 +19,7 @@
     "dev": "vitest",
     "release": "np",
     "test": "vitest run --coverage",
-    "pretest": "eslint lib/*.{js,ts}"
+    "pretest": "biome lint ./lib"
   },
   "keywords": [
     "css-selectors",
@@ -41,10 +41,8 @@
     "posthtml": "^0.16.6"
   },
   "devDependencies": {
-    "@eslint/js": "^9.0.0",
-    "@stylistic/eslint-plugin": "^2.1.0",
+    "@biomejs/biome": "1.8.3",
     "@vitest/coverage-v8": "^1.1.1",
-    "eslint": "^9.0.0",
     "np": "^10.0.0",
     "vitest": "^1.1.1"
   }
